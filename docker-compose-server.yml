@@ -1,0 +1,13 @@
+version: "2"
+services:
+  synergy-server:
+    container_name: synergyserver
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - 12000:12000
+    entrypoint:
+      - synergys
+      - -h
+
